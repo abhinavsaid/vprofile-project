@@ -80,9 +80,9 @@ pipeline {
         }
     }
         stage('deployintotomcat') {
-     sshagent(['jeetkeypair']) {
-     sh "scp -o StrictHostKeyChecking=no target/vprofile-v2.war ubuntu@3.26.3.61:/root/apache-tomcat-9.0.76/webapps"
+            sshagent(['e6646efc-38fd-4a3e-9446-505089f74c58']) {
+            sh "scp -o StrictHostKeyChecking=no target/vprofile-v2.war ubuntu@3.26.3.61:/root/apache-tomcat-9.0.76/webapps"
 }
 }
 }
-
+}
